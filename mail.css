@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-color : #f0f0f7;
+}
+
+#sidebar{
+    display: flex;
+    justify-content: flex-start;
+    width:260px;
+    height: 100vh;
+    background-color: #43425d;
+}
+
+#tab{
+  width: 260px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background:  #43425d;
+}
+
+#tab li  {
+    color: #fff;
+    text-decoration: none;
+    width: 260px;
+    height: 53px;
+   
+  }
+
+#tab :hover  {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#inbox{
+    position: absolute;
+    left: 345px;
+    bottom: 40px;
+    width: 1170px;
+    height: 752px;
+    background-color: #ffffff;
+}
+
+#menu{
+    display: inline-block;
+    width: 200px;
+    height: 752px;
+    background-color: #43425d;
+}
+
+#search{
+  position: absolute;
+  left: 200px;
+  top: 0px;
+  width: 300px;
+  height: 56px;
+}
+
+#userList{
+  position: absolute;
+  top: 56px;
+  left: 200px;
+  width: 300px;
+  height: 657px;
+}
+
+#list{
+  padding: 0px;
+  margin: 0px;
+}
+
+#list li{
+  width: 300px;
+  height: 80px;
+  list-style: none;
+  padding: 0px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.04);
+}
+
+#list :hover{
+  background-color: #f0f0f7
+}
+
+#mainText{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: inline-block;
+  border-left:1px solid #f0f0f7;
+  width: 670px;
+  height:752px;
+}
+
+#nameBox{
+  width: 670px;
+  height:143.3px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.04);
+}
+#contentBox{
+   height: 608.7px;
+  width: 670px; 
+
+}
+
+#content{
+  margin-top: 32.7px;
+  margin-left: 38px;
+}
