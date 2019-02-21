@@ -1,13 +1,14 @@
 const tab = document.getElementById("tab");
 const inbox = document.getElementById("inbox")
-const menu = document.getElementById('menu');
+const list = document.getElementById('list')
+let lists = []
 let tabs = [];
 
 for(let i = 0; i < tab.children.length;i++ ){
     tabs[i] = tab.children[i]
     tabs[i].order = i;
      tabs[i].addEventListener('click', function(e){
-         clear_();
+         clear_('istab');
         console.log(tabs[i] + "/ order:" + tabs[i].order) 
         e.target.classList.add('active');
         changePos(tabs[i].order);
@@ -54,13 +55,27 @@ function changePos(order){
     }
 }
 
-function clear_(){
-    for(let i = 0; i < tabs.length;i++){
-        tabs[i].classList.remove('active');
+function clear_(act){
+    if(act == 'istab'){
+        for(let i = 0; i < tabs.length;i++){
+            tabs[i].classList.remove('active');
+        }
     }
-
+    else if(act == 'islist'){
+        for(let i = 0; i < lists.length;i++){
+            lists[i].classList.remove('active');
+        }
+    }
 }
 
-function some(){
-    console.log(tabs[0].order);
+
+//------------------------------------------
+for(let i = 0; i<list.children.length;i++){
+    lists[i] = list.children[i]
+    lists[i].addEventListener("click", function(e){
+        clear_('islist'); 
+        e.target.classList.add('active');
+    })
 }
+
+
