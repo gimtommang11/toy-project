@@ -20,22 +20,48 @@
         </div>
         <div id = inbox>
             <div id = compose>compose</div>
-            <div id = menu></div>       <!--inbox/tag-->
-            <form ><input type="text" id="search" value="search"></form>
+            <div id = sidemenu>
+                <ul id="menus">
+                    <li id="menus-selected">Inbox</li>
+                    <li>Sent</li>
+                    <li>Drafts</li>
+                    <li>Trash</li>
+                    <li>Important</li>
+                    <li>Spam</li>
+                    <li>Starred</li>
+                </ul>
+                <ul id="tag">
+                    <div id="Tag">Tag</div>
+                    <li><div class="tagkind" id="Sales"></div><div class="tags">Sales</div><div class="count">2</div></li>
+                    <li><div class="tagkind" id="Marketing"></div><div class="tags">Marketing</div><div class="count">1</div></li>
+                    <li><div class="tagkind" id="Design"></div><div class="tags">Design</div><div class="count">2</div></li>
+                    <li><div class="tagkind" id="FrontEnd"></div><div class="tags">FrontEnd</div><div class="count">2</div></li>
+                </ul>
+            </div>       
+            <form><input type="text" id="search" value="Search Message or Name…"></form>
             <div id = userList>
                 <ul id = list>
-                    <li class = 'active'>a</li>
-                    <li>b</li>
-                    <li>c</li>
-                    <li>d</li>
+                    <li class = 'active'>
+                        <span class="userprvicon" id="DavidJames"></span>
+                        <div class="userprvName">David James</div>
+                        <div class="userprvContent">Lorem ipsum dolor sit amet Consectetur…</div>
+                    </li>
+                    <li>
+                        <div class="userprvicon"id="TonyStark"></div>
+                        <div class="userprvName">Tony Stark</div>
+                        <div class="userprvContent">Lorem ipsum dolor sit amet Consectetur…</div>
+                    </li>
                 </ul>
            </div>
             <div id="mainText">
                 <div id="nameBox">
-                    <p id="name"></p>
+                    <div id="tagName">Design</div>
+                    <div>Protective Preventative Maintenance</div>
+                    <div id="usericon"></div>
+                    <p id="name">thisname</p>
                 </div>
-                <div id = contentBox>
-                    <p id=content></p>
+                <div id = 'contentBox'>
+                    <p id='content'>thisiscontent</p>
                 </div>
             </div>
         </div>

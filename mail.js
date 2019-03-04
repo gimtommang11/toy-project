@@ -16,7 +16,7 @@ for(let i = 0; i < tab.children.length;i++ ){
 }
 
 function changePos(order){
-    if(order == 0){
+/*    if(order == 0){
         inbox.innerText = "case0"
         console.log("0 is clicked")
     }
@@ -52,7 +52,7 @@ function changePos(order){
     else{
         inbox.innerText = "case3"
         console.log("3 is clicked")
-    }
+    }*/
 }
 
 function clear_(act){
@@ -73,9 +73,19 @@ function clear_(act){
 for(let i = 0; i<list.children.length;i++){
     lists[i] = list.children[i]
     lists[i].addEventListener("click", function(e){
+        if(e.target == e.currentTarget){
         clear_('islist'); 
-        e.target.classList.add('active');
+        e.target.classList.add('active');}
     })
 }
 
-
+const listobj =[   
+    {
+        names : 'asd',
+        content : 'adf'
+    },
+    {
+        names : 'qwer',
+        content : 'qwe' 
+    }
+]

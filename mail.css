@@ -25,7 +25,7 @@ body{
     text-decoration: none;
     width: 260px;
     height: 53px;
-   
+    font-size: 15px;
   }
 
 #tab :hover  {
@@ -45,11 +45,86 @@ body{
     background-color: #ffffff;
 }
 
-#menu{
-    display: inline-block;
+#compose{
+  position: relative;
+  top: 22px;
+  left: 23px;
+  display: table-cell;
+  width: 155px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: #3b86ff;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: middle; 
+  color: #ffffff;
+}
+
+#sidemenu{
+    position: absolute;
+    top: 80px;
     width: 200px;
     height: 752px;
-    background-color: #43425d;
+    box-shadow: 0px -2px 6px  rgba(0, 0, 0, 0.04);
+}
+
+#menus{ 
+  position: relative;
+  left: 15px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 13px;
+  color: #4d4f5c;
+}
+
+#menus li{  
+  margin-top: 16px;
+  text-decoration: none;
+}
+
+#tag{
+  margin-top: 50px;
+  padding: 0;
+  list-style-type: none;
+  font-size: 13px;
+  color :#4d4f5c;
+}
+
+#tag li{
+  margin-top: 16px;
+}
+
+#Tag{
+  position: relative;
+  top: 0px;
+  left: 15px;
+  margin-top: 16px;
+  font-weight: bold;
+  color: #4d4f5c;
+}
+
+.tagkind{ 
+  position: absolute;
+  left: 23px;
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+#Sales{background-color: #a3a0fb;}
+#Marketing{background-color: #3b86ff; }
+#Design{background-color: #ff6565;}
+#FrontEnd{background-color: #7865ff;}
+
+.tags{
+  position: absolute;
+  left: 46px;
+}
+
+.count{
+  position: relative;
+  left: 171px;
 }
 
 #search{
@@ -57,12 +132,12 @@ body{
   left: 200px;
   top: 0px;
   width: 300px;
-  height: 56px;
+  height: 80px;
 }
 
 #userList{
   position: absolute;
-  top: 56px;
+  top: 80px;
   left: 200px;
   width: 300px;
   height: 657px;
@@ -73,7 +148,7 @@ body{
   margin: 0px;
 }
 
-#list li{
+#list li {
   width: 300px;
   height: 80px;
   list-style: none;
@@ -84,6 +159,37 @@ body{
 #list :hover{
   background-color: #f0f0f7
 }
+
+.userprvicon{
+  display: inline-block;
+  position: relative;
+  top: 19.7px;
+  left: 23px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+#DavidJames{  background-color:#3b86ff;}
+#TonyStark{ background-color: #7865ff;}
+
+.userprvName{
+  display: inline-block;
+  position: relative;
+  left: 23px;
+  font-size: 13px;
+  font-weight: bold; 
+  color: #4d4f5c; 
+}
+
+.userprvContent{
+ display: inline-block;
+  position: relative;
+  left:70px;
+  
+  font-size: 11px;
+  color: #43425d;
+}
+
 
 #mainText{
   position: absolute;
@@ -100,6 +206,20 @@ body{
   height:143.3px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.04);
 }
+
+#tagName{
+  width: 75px;
+  height: 24px;
+  border-radius: 14px;
+  background-color: #ff6565;
+}
+
+.usericon{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
 #contentBox{
    height: 608.7px;
   width: 670px; 
