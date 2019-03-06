@@ -12,21 +12,47 @@ body{
     background-color: #43425d;
 }
 
+#possible{
+  width: 260px;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+#possible p{
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: bold;  
+  color: #fff; 
+}
+
 #tab{
   width: 260px;
   margin: 0;
-  padding: 0;
+  padding:0;
   list-style: none;
   background:  #43425d;
 }
 
 #tab li  {
+    margin-top: 6px;
     color: #fff;
     text-decoration: none;
     width: 260px;
     height: 53px;
     font-size: 15px;
-  }
+}
+
+#tab div{
+  position: relative;
+  top: 16px;
+  left: 52px;
+
+}
 
 #tab :hover  {
     background-color: rgba(0, 0, 0, 0.1);
@@ -36,6 +62,18 @@ body{
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+/*#activeBar{
+  
+}*/
+
+#inboxName{
+  position: absolute;
+  top: 80px;
+  left: 345px;
+  font-size: 28px;
+  color: #4d4f5c;
+}
+
 #inbox{
     position: absolute;
     left: 345px;
@@ -43,6 +81,7 @@ body{
     width: 1170px;
     height: 752px;
     background-color: #ffffff;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.04);
 }
 
 #compose{
@@ -104,7 +143,7 @@ body{
   color: #4d4f5c;
 }
 
-.tagkind{ 
+.tagkind{     /*js이용해서 붙일수도 있을듯*/
   position: absolute;
   left: 23px;
   display: inline-block;
@@ -112,6 +151,7 @@ body{
   width: 10px;
   height: 10px;
 }
+/*class로 하도록 지향(tagName 클래스 )*/
 #Sales{background-color: #a3a0fb;}
 #Marketing{background-color: #3b86ff; }
 #Design{background-color: #ff6565;}
@@ -160,6 +200,13 @@ body{
   background-color: #f0f0f7
 }
 
+/*.barTag{
+  display: inline-block;
+  width: 3px;
+  height: 80px;
+  background-color: #ff6565;
+}*/
+
 .userprvicon{
   display: inline-block;
   position: relative;
@@ -207,17 +254,64 @@ body{
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.04);
 }
 
-#tagName{
+#mailTitle{
+  position: absolute;
+  top: 29px;
+  left: 125px;
+  font-size: 18px;
+  color:#4d4f5c;
+}
+
+.tagName{
+  position: relative;
+  display: table-cell;
+  top: 30px;
+  left: 38px;
   width: 75px;
   height: 24px;
   border-radius: 14px;
-  background-color: #ff6565;
+  text-align: center;
+  vertical-align: middle; 
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;  
 }
 
-.usericon{
+#usericon{
+  display: inline-block;
+  position: absolute;
+  top: 73px;
+  left: 38px;
+  border-radius: 50%;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  background-color:#3b86ff;
+}
+
+#userName{
+  position: absolute;
+  left: 85px;
+  top: 73px;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-weight: bold;
+  color: #4d4f5c; 
+}
+
+/*#reception{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}*/
+
+#mailDate{
+  position: absolute;
+  right: 32px;
+  top:75px;
+  color:#43425d;
+  font-size: 11px;
+  
 }
 
 #contentBox{
@@ -227,6 +321,8 @@ body{
 }
 
 #content{
+  color: #4d4f5c;
   margin-top: 32.7px;
-  margin-left: 38px;
+  margin-left: 38px; 
+  margin-right: 32px;
 }

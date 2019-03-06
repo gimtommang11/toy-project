@@ -6,21 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>mail</title>
     <link rel="stylesheet" type="text/css" href="./mail.css">
-</head>
+</head>              
 <body>
-    <div id = sidebar>
+    <div id = sidebar>    
         <div id='box'></nav>
+            <div id ="possible"><p>possible</p></div>
             <ul id="tab">
-                <li>home</li>
-                <li>customers</li>
-                <li class="active">inbox</li>
-                <li>settings</li>
-            </ul>
+                <li><div>Home</div></li>
+                <li><div>Customers</div></li>
+                <li class="active"><div>Inbox</div></li>
+                <li><div>Settings</div></li>
+            </ul> 
         </div>
-        </div>
-        <div id = inbox>
-            <div id = compose>compose</div>
-            <div id = sidemenu>
+    </div>
+
+        <div id = "inboxName">Inbox</div>
+        <div id = 'inbox'>
+            <div id = 'compose'>compose</div>
+            <div id = 'sidemenu'>
                 <ul id="menus">
                     <li id="menus-selected">Inbox</li>
                     <li>Sent</li>
@@ -42,6 +45,7 @@
             <div id = userList>
                 <ul id = list>
                     <li class = 'active'>
+                        <!--<div class="barTag" id="Design"></div>-->
                         <span class="userprvicon" id="DavidJames"></span>
                         <div class="userprvName">David James</div>
                         <div class="userprvContent">Lorem ipsum dolor sit amet Consectetur…</div>
@@ -55,13 +59,21 @@
            </div>
             <div id="mainText">
                 <div id="nameBox">
-                    <div id="tagName">Design</div>
-                    <div>Protective Preventative Maintenance</div>
+                    <div class="tagName" id="Design" >Design</div>
+                    <div id="mailTitle">Protective Preventative Maintenance</div>
                     <div id="usericon"></div>
-                    <p id="name">thisname</p>
+                    <p id="userName">David James</p>
+                    <p id="mailDate">Jan 5.2018</p>
+                    <!--<p id="reception">to me</p>-->
                 </div>
                 <div id = 'contentBox'>
-                    <p id='content'>thisiscontent</p>
+                    <p id='content'>Hi David,
+
+                        Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum assumenda ipsam magnam cum possimus. Laudantium nulla amet tempore excepturi id expedita dolorum quisquam deserunt. Odit vel sint dolor eos. Ea blanditiis animi. Quibusdam unde unde. Perspiciatis vel pariatur qui. Deleniti omnis est quae. Laboriosam numquam amet aliquid.<br>
+                        <br>
+                        Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum assumenda ipsam magnam cum possimus. Laudantium nulla amet tempore excepturi id expedita dolorum quisquam deserunt. Odit vel sint dolor eos. Ea blanditiis animi. Quibusdam unde unde. Perspiciatis vel pariatur qui. Deleniti omnis est quae. Laboriosam numquam amet aliquid.Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum<br>
+                        <br>
+                        Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum assumenda ipsam magnam cum possimus. Laudantium nulla amet tempore excepturi id expedita dolorum </p>
                 </div>
             </div>
         </div>
