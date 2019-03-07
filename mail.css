@@ -54,7 +54,7 @@ body{
 
 }
 
-#tab :hover  {
+#tab :hover:not(div) {
     background-color: rgba(0, 0, 0, 0.1);
   }
 
