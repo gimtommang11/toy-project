@@ -1,3 +1,4 @@
+
 //추가된 list는 appendchild로
 const tab = document.getElementById("tab");
 const inbox = document.getElementById("inbox")
@@ -13,18 +14,17 @@ const susericon = document.getElementById('usericon');       //색바꾸기
 //--태그개수
 const tagCount = document.getElementsByClassName('count')       //배열임
 
-//--검색기능
-const searchBar = document.getElementById('search');
+//--검색기q능
+const searchVal = document.getElementById('search').value;
 
 let lists = []
 let tabs = [];      
-let Sales =0
-let Marketing = 0
-let Design = 0
-let FrontEnd = 0
+let Sales =0;
+let Marketing = 0;
+let Design = 0;
+let FrontEnd = 0;
 
-
-for(let i = 0; i < tab.children.length;i++ ){
+for(let i = 0; i < tab.children.length;i++ ){       //사이드탭 클릭하면 색 변하는 이벤트
     tabs[i] = tab.children[i]
     tabs[i].order = i;
      tabs[i].addEventListener('click', function(e){
@@ -70,77 +70,92 @@ function clear_(act){
         }
     }
     else if(act == 'islist'){
-        for(let i = 0; i < lists.length;i++){
-            lists[i].classList.remove('active');
+        for(let i = 0; i < list.children.length;i++){
+            console.log("removed")
+            list.children[i].classList.remove('active');
         }
     }
 }
 
 //------------------------------------------
-const listobj =[   
+const mailList =[   
     {
         names :'David James',
         content : 'Hi David,<br>Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum assumenda ipsam magnam cum possimus. Laudantium nulla amet tempore excepturi id expedita dolorum quisquam deserunt. Odit vel sint dolor eos. Ea blanditiis animi. Quibusdam unde unde. Perspiciatis vel pariatur qui. Deleniti omnis est quae. Laboriosam numquam amet aliquid.<br> Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum assumenda ipsam magnam cum possimus. Laudantium nulla amet tempore excepturi id expedita dolorum quisquam deserunt. Odit vel sint dolor eos. Ea blanditiis animi. Quibusdam unde unde. Perspiciatis vel pariatur qui. Deleniti omnis est quae. Laboriosam numquam amet aliquid.Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum<br> Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum assumenda ipsam magnam cum possimus. Laudantium nulla amet tempore excepturi id expedita dolorum ',
         title : 'Protective Preventative Maintenance',
         maildate :'Jan 5',
-        iconColor:'#3b86ff',
+        iconColor:'#1abc9c',
         tagName: "Design",
         tagColor: "#ff6565"
 
     },
     {
-        names : 'Tony Stark',
-        content : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden.<br>thank you.',
+        names :'a',
+        content : 'dddddddd',
+        title : 'cccccc',
+        maildate :'Jan d',
+        iconColor:'#9b59b6',
+        tagName: "Marketing",
+        tagColor: "#3b86ff"
+    },
+    {
+        names :'Tony Stark',
+        content : 'Hi David,<br>Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum assumenda ipsam magnam cum possimus. Laudantium nulla amet tempore excepturi id expedita dolorum quisquam deserunt. Odit vel sint dolor eos. Ea blanditiis animi. Quibusdam unde unde. Perspiciatis vel pariatur qui. Deleniti omnis est quae. Laboriosam numquam amet aliquid.<br> Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum assumenda ipsam magnam cum possimus. Laudantium nulla amet tempore excepturi id expedita dolorum quisquam deserunt. Odit vel sint dolor eos. Ea blanditiis animi. Quibusdam unde unde. Perspiciatis vel pariatur qui. Deleniti omnis est quae. Laboriosam numquam amet aliquid.Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum<br> Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum assumenda ipsam magnam cum possimus. Laudantium nulla amet tempore excepturi id expedita dolorum ',
         title : 'Does this mail service work well?',
-        maildate :'Jan 4',
-        iconColor:'#7865ff',
-        tagName: "Sales",
-        tagColor: "#a3a0fb"
+        maildate :'Jan 5',
+        iconColor:'#3b86ff',
+        tagName: "Design",
+        tagColor: "#ff6565"
     }
-]
-
-for(let i = 0; i<list.children.length;i++){
-    lists[i] = list.children[i]
-    countTag(i);
+]  
+const renderList = [];
+listRendering();
+function listRendering() {      //mailList에 있는것들을 정보화
+    for(let i = 0; i<mailList.length; i++){
+        renderList[i] = `<li>
+        <div class="userprvicon" id="DavidJames" style="background: ${mailList[i].iconColor}"></div>
+        <div class="userprvName">${mailList[i].names}</div>
+        <div class="userprvContent">${mailList[i].title}</div>
+    </li>`
+        countTag(i);
+    }
+    const renderListText = renderList.join('');     //문자열로 합침
+    list.innerHTML=renderListText;     //정보화된걸 그려줌
+    
+    for(let i=0; i<renderList.length; i++){     //메일리스트 이벤트
+        console.log(list.children);
+        list.children[i].addEventListener("click", function(e){
+            if(e.target == e.currentTarget){ 
+                console.log('aa');
+                clear_('islist');   
+                e.target.classList.add('active');
+                mainTextShow(i);
+            }
+        })
+    }
     tagShow()
-    lists[i].addEventListener("click", function(e){
-        if(e.target == e.currentTarget){
-            clear_('islist'); 
-            e.target.classList.add('active');
-            show(i);
-        }
-    })
+    return renderList;
 }
 
 
-function show(listOrder){
-    mailTitle.innerHTML = listobj[listOrder].title;
-    userName.innerHTML = listobj[listOrder].names;
-    mailDate.innerHTML = listobj[listOrder].maildate;
-    content.innerHTML = listobj[listOrder].content;
-    usericon.style.backgroundColor = listobj[listOrder].iconColor;
-    tagName.innerText = listobj[listOrder].tagName;
-    tagName.style.backgroundColor = listobj[listOrder].tagColor;
+function mainTextShow(listIndex){
+    mailTitle.innerHTML = mailList[listIndex].title;
+    userName.innerHTML = mailList[listIndex].names;
+    mailDate.innerHTML = mailList[listIndex].maildate;
+    content.innerHTML = mailList[listIndex].content;
+    usericon.style.backgroundColor = mailList[listIndex].iconColor;
+    tagName.innerText = mailList[listIndex].tagName;
+    tagName.style.backgroundColor = mailList[listIndex].tagColor;
 }
 
 function countTag(i){
-    /*  switch(listobj[i].tagName){
-        case 'Sales':
-            tags.Sales+=1;
-        case 'Marketing':
-            tags.Marketing+=1;
-        case 'Design':
-            tags.Design+=1;
-        case 'FrontEnd':
-            tags.FrontEnd+=1;
-    }*/
-    if(listobj[i].tagName == 'Sales'){
+    if(mailList[i].tagName == 'Sales'){
         Sales+=1;
     }
-    else if(listobj[i].tagName == 'Marketing'){
+    else if(mailList[i].tagName == 'Marketing'){
         Marketing+=1;
     }
-    else if(listobj[i].tagName == 'Design'){
+    else if(mailList[i].tagName == 'Design'){
         Design+=1;
     }
     else{
@@ -153,5 +168,11 @@ function tagShow(){
     tagCount[0].innerText = Sales;
     tagCount[1].innerText =Marketing;
     tagCount[2].innerText = Design;
-    tagCount[3].innerText = FrontEnd        ;
+    tagCount[3].innerText = FrontEnd;
 }
+
+function search(){
+    for(let i = 0; i < listobj.length;i++){
+ 
+    }
+}  

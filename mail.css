@@ -236,10 +236,9 @@ body{
 }
 
 .userprvContent{
- display: inline-block;
+  margin-top:4px;
   position: relative;
   left:70px;
-  
   font-size: 11px;
   color: #43425d;
 }
