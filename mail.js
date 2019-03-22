@@ -106,6 +106,15 @@ const mailList =[
         iconColor:'#3b86ff',
         tagName: "Design",
         tagColor: "#ff6565"
+    },
+    {
+        names :'Tony Stark',
+        content : 'Hi David,<br>Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum assumenda ipsam magnam cum possimus. Laudantium nulla amet tempore excepturi id expedita dolorum quisquam deserunt. Odit vel sint dolor eos. Ea blanditiis animi. Quibusdam unde unde. Perspiciatis vel pariatur qui. Deleniti omnis est quae. Laboriosam numquam amet aliquid.<br> Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum assumenda ipsam magnam cum possimus. Laudantium nulla amet tempore excepturi id expedita dolorum quisquam deserunt. Odit vel sint dolor eos. Ea blanditiis animi. Quibusdam unde unde. Perspiciatis vel pariatur qui. Deleniti omnis est quae. Laboriosam numquam amet aliquid.Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum<br> Iste minus et. Non necessitatibus ut est est id amet. Officiis sequi dolorum assumenda ipsam magnam cum possimus. Laudantium nulla amet tempore excepturi id expedita dolorum ',
+        title : 'Does this mail service work well?',
+        maildate :'Jan 5',
+        iconColor:'#3b86ff',
+        tagName: "Design",
+        tagColor: "#ff6565"
     }
 ]  
 const renderList = [];
@@ -125,12 +134,13 @@ function listRendering() {      //mailList에 있는것들을 정보화
     for(let i=0; i<renderList.length; i++){     //메일리스트 이벤트
         console.log(list.children);
         list.children[i].addEventListener("click", function(e){
-            if(e.target == e.currentTarget){ 
-                console.log('aa');
-                clear_('islist');   
-                e.target.classList.add('active');
-                mainTextShow(i);
-            }
+            e.stopPropagation();
+            console.log(e.target);
+            console.log('aa');  
+            clear_('islist');   
+            e.currentTarget.classList.add('active');
+            mainTextShow(i);
+            
         })
     }
     tagShow()
